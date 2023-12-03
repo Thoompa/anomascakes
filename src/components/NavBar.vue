@@ -1,37 +1,50 @@
-<script setup lang="ts">
-// import RouterLink from 'vue-router'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="navbar">
-    <img
-      alt="Anomas Cakes logo"
-      class="logo"
-      src="@/assets/anomas_cakes_logo.jpg"
-      width="125"
-      height="125"
-    />
+  <div class="header">
+    <div class="navbar">
+      <div class="image">
+        <img
+          alt="Anomas Cakes logo"
+          class="logo"
+          src="@/assets/anomas_cakes_logo.jpg"
+          width="125"
+          height="125"
+        />
+      </div>
 
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/products">Products</RouterLink>
-        <RouterLink to="/order">Order</RouterLink>
-      </nav>
+      <div class="routerlinks">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/products">Products</RouterLink>
+          <RouterLink to="/order">Order</RouterLink>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.header {
+  width: 100%;
+  background-color: var(--vt-c-indigo);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-inline: 30px;
+  height: 125px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+}
+
+.routerlinks {
+  margin: 0 auto;
 }
 
 nav {
@@ -51,7 +64,8 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-border);
+  font-size: xxx-large;
 }
 
 nav a:first-of-type {
