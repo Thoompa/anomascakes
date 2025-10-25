@@ -29,6 +29,8 @@
 .header {
   width: 100%;
   background-color: var(--vt-c-indigo);
+  position: fixed;
+  z-index: 100;
 }
 
 .navbar {
