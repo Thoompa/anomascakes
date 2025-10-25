@@ -7,7 +7,7 @@
         <img
           alt="Anomas Cakes logo"
           class="logo"
-          src="@/assets/anomas_cakes_logo.jpg"
+          src="@/assets/images/anomas_cakes_logo.jpg"
           width="125"
           height="125"
         />
@@ -17,7 +17,7 @@
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/products">Products</RouterLink>
+          <RouterLink to="/menu">Menu</RouterLink>
           <RouterLink to="/order">Order</RouterLink>
         </nav>
       </div>
@@ -35,16 +35,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: 30px;
+  margin-inline: var(--app-padding-inline);
   height: 125px;
-}
-
-.logo {
-  display: block;
-}
-
-.routerlinks {
-  margin: 0 auto;
 }
 
 nav {

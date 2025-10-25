@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+}
+
+.images {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}

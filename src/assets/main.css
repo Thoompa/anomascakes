@@ -1,4 +1,7 @@
 @import './base.css';
+@import './colours.css';
+@import './styles.css';
+@import './variables.css';
 
 #app {
   background: var(--color-background);
