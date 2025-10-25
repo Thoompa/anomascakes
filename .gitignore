@@ -17,6 +17,9 @@ coverage
 /cypress/videos/
 /cypress/screenshots/
 
+# Generated js files
+**/*.vue.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
