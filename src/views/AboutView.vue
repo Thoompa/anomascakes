@@ -1,16 +1,20 @@
 <template>
   <div class="about">
-    <img alt="Anomas Cakes logo" class="images" src="@/assets/images/anomas_cakes_logo.jpg" />
-    <h1>About Us</h1>
-    <p>
-      This is a paragraph about Anomas Cakes, who we are, what we do, where we comes from and what
-      our names are. My name is Tim, what's your name? Hi, cool, how are you? I'm good, what about
-      you? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="text">
+      <h1>About Us</h1>
+      <p>
+        We’re a small team with a big love for Sri Lankan flavours. Our founder, Anoma, grew up in
+        Sri Lanka and has been cooking for over 35 years, bringing a deep knowledge of the cuisine
+        and a passion for sharing it with others.<br />
+        Inspired by the kitchens and street stalls of the island, we bring you a modern take on
+        classic cakes, snacks and bakes. From crisp pan rolls to soft maalu paan, golden cutlets to
+        modern cakes - everything we make is rooted in family recipes, use of fresh ingredients, and
+        the joy of sharing good food.<br />
+        Whether you grew up with these favourites or are trying them for the first time, we’re here
+        to serve a taste of home.
+      </p>
+    </div>
+    <img alt="Anomas Cakes logo" src="@/assets/images/anoma.jpg" />
   </div>
 </template>
 
@@ -18,7 +22,13 @@
 .about {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   margin-block: var(--default-margin-block);
+  gap: 50px;
+}
+
+.text {
+  width: 500px;
+  align-content: center;
 }
 </style>

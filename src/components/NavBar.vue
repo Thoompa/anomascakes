@@ -5,13 +5,7 @@
     <div class="navbar">
       <div class="image">
         <RouterLink to="/">
-          <img
-            alt="Anomas Cakes logo"
-            class="logo"
-            src="@/assets/images/anomas_cakes_logo.jpg"
-            width="125"
-            height="125"
-          />
+          <img alt="Anomas Cakes logo" class="logo" src="@/assets/images/anomas_cakes_logo.jpg" />
         </RouterLink>
       </div>
 
@@ -35,19 +29,23 @@
   z-index: 100;
 }
 
+.logo {
+  height: var(--navbar-height);
+  width: var(--navbar-height);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: var(--app-padding-inline);
-  height: 125px;
+  height: var(--navbar-height);
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -61,7 +59,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   padding: 0 1rem;
   border-left: 3px solid var(--color-border);
-  font-size: xxx-large;
+  font-size: 18px;
 }
 
 nav a:first-of-type {

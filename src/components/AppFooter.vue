@@ -9,7 +9,7 @@
       <span style="font-weight: bold"> Anomas Cakes </span>
       <span> Caroline Springs </span>
       <span> Pickup only </span>
-      <span> T: fake number for now </span>
+      <span> T: 0478 066 761 </span>
       <span> E: info@anomascakes.com.au </span>
     </div>
     <div class="col">
