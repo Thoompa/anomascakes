@@ -10,14 +10,18 @@
     <div>
       <div class="row">
         <div class="col">
-          <img alt="Anomas Cakes logo" class="images" src="@/assets/images/anomas_cakes_logo.jpg" />
-          <h3 style="text-align: center">Cakes</h3>
-          <p style="text-align: center">Sample cakes subheading</p>
+          <RouterLink to="/cakes">
+            <img alt="Anomas Cakes logo" class="images" src="@/assets/images/cakes.jpg" />
+            <h3 style="text-align: center">Cakes</h3>
+            <p style="text-align: center">Sample cakes subheading</p>
+          </RouterLink>
         </div>
         <div class="col">
-          <img alt="Anomas Cakes logo" class="images" src="@/assets/images/anomas_cakes_logo.jpg" />
-          <h3 style="text-align: center">Short eats</h3>
-          <p style="text-align: center">Sample short eats subheading</p>
+          <RouterLink to="/shorteats">
+            <img alt="Anomas Cakes logo" class="images" src="@/assets/images/shorteats.jpg" />
+            <h3 style="text-align: center">Sri Lankan Short eats</h3>
+            <p style="text-align: center">Sample short eats subheading</p>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -27,8 +31,8 @@
 <script setup lang="ts">
 const photos = [
   'src/assets/images/anomas_cakes_logo.jpg',
-  'src/assets/images/instagram-icon.png',
-  'src/assets/images/facebook-icon.png'
+  'src/assets/images/cakes.jpg',
+  'src/assets/images/shorteats.jpg'
 ]
 </script>
 
@@ -36,11 +40,22 @@ const photos = [
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 45px;
+
+  .col {
+    align-self: center;
+  }
 }
 
 .home-body {
   margin-block: var(--default-margin-block);
+}
+
+.images {
+  width: 500px;
+  align-self: center;
 }
 
 .v-carousel {

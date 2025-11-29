@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <img alt="Anomas Cakes logo" class="images" src="@/assets/images/anomas_cakes_logo.jpg" />
+    <img alt="Anomas Cakes logo" class="images" src="@/assets/images/shorteats.jpg" />
   </div>
 </template>
 

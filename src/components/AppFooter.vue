@@ -19,8 +19,8 @@
 </template>
 
 <script lang="ts">
-import FacebookIcon from '@/assets/images/facebook-icon.png'
-import InstagramIcon from '@/assets/images/instagram-icon.png'
+import FacebookIcon from '@/assets/images/facebook.jpg'
+import InstagramIcon from '@/assets/images/instagram.jpg'
 
 export default {
   name: 'AppFooter',
@@ -52,6 +52,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin-block: var(--default-margin-block) 30px;
+}
+
+.logo {
+  border-radius: 8px;
 }
 
 .social-media {

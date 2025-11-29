@@ -13,7 +13,8 @@
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/menu">Menu</RouterLink>
+          <RouterLink to="/cakes">Cakes</RouterLink>
+          <RouterLink to="/shorteats">Short Eats</RouterLink>
           <RouterLink to="/order">Order</RouterLink>
         </nav>
       </div>
