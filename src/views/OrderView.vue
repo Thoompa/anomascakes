@@ -4,39 +4,45 @@
       action="https://public.herotofu.com/v1/37440b50-b158-11f0-beba-f5677707202f"
       method="post"
       accept-charset="UTF-8"
+      class="form"
     >
       <label for="fname">First name:</label><br />
-      <input type="text" id="fname" name="fname" value="" required /><br />
+      <v-text-field id="fname" name="fname" required /><br />
 
       <label for="lname">Last name:</label><br />
-      <input type="text" id="lname" name="lname" value="" required /><br /><br />
+      <v-text-field id="lname" name="lname" required /><br />
 
       <label for="email">Email:</label><br />
-      <input type="text" id="email" name="email" value="" required /><br /><br />
+      <v-text-field id="email" name="email" required /><br />
 
       <label for="phone">Phone:</label><br />
-      <input type="text" id="phone" name="phone" value="" required /><br /><br />
+      <v-text-field id="phone" name="phone" required /><br />
 
       <label for="source">How did you find us?</label><br />
-      <select id="source" name="source" v-model="source" required>
-        <option value="facebook">Facebook</option>
-        <option value="instagram">Instagram</option>
-        <option value="web">Web search</option>
-        <option value="mouth">Word of Mouth</option>
-        <option value="other">Other</option>
-      </select>
+      <v-combobox
+        id="source"
+        name="source"
+        v-model="source"
+        :items="['Facebook', 'Instagram', 'Web search', 'Word of Mouth', 'Other']"
+        required
+      >
+      </v-combobox>
 
       <div v-if="source === 'other'">
         <label for="message">Please specify:</label><br />
-        <input type="text" id="sourceOther" name="sourceOther" value="" />
+        <v-text-field id="sourceOther" name="sourceOther" />
       </div>
-      <br /><br />
+      <br />
 
       <label for="message">Add a message: (optional)</label><br />
-      <input type="text" id="message" name="message" value="" /><br /><br />
+      <v-textarea id="message" name="message" /><br />
 
-      <input type="submit" value="Submit" />
+      <v-btn type="submit">Submit</v-btn>
     </form>
+    <div>
+      <h2>All Enquiries:</h2>
+      <a href="mailto:info@anomascakes.com.au">info@anomascakes.com.au</a>
+    </div>
   </div>
 </template>
 
@@ -44,14 +50,16 @@
 import { ref } from 'vue'
 
 const source = ref('')
-
-function submitForm(): void {
-  alert('Form submitted!')
-}
 </script>
 
 <style scoped>
 .order {
   margin: var(--default-margin-block) 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.form {
+  width: 800px;
 }
 </style>

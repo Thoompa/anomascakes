@@ -10,7 +10,7 @@
       <span> Caroline Springs </span>
       <span> Pickup only </span>
       <span> T: fake number for now </span>
-      <span> E: fake email for now </span>
+      <span> E: info@anomascakes.com.au </span>
     </div>
     <div class="col">
       <span> Anomas Cakes ©2025 </span>

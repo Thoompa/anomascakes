@@ -1,5 +1,7 @@
 <template>
-  <ImageCarousel :images="photos" />
+  <v-carousel show-arrows="hover" class="v-carousel">
+    <v-carousel-item v-for="(img, index) in photos" :key="index" :src="img" cover></v-carousel-item>
+  </v-carousel>
   <div class="home-body">
     <div>
       <h1 style="text-transform: uppercase; text-align: center">Sample Heading</h1>
@@ -23,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import ImageCarousel from '@/components/ImageCarousel.vue'
-
 const photos = [
   'src/assets/images/anomas_cakes_logo.jpg',
   'src/assets/images/instagram-icon.png',
@@ -41,5 +41,11 @@ const photos = [
 
 .home-body {
   margin-block: var(--default-margin-block);
+}
+
+.v-carousel {
+  width: 600px;
+  height: 600px !important;
+  justify-self: center;
 }
 </style>

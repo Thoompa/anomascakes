@@ -4,13 +4,15 @@
   <div class="header">
     <div class="navbar">
       <div class="image">
-        <img
-          alt="Anomas Cakes logo"
-          class="logo"
-          src="@/assets/images/anomas_cakes_logo.jpg"
-          width="125"
-          height="125"
-        />
+        <RouterLink to="/">
+          <img
+            alt="Anomas Cakes logo"
+            class="logo"
+            src="@/assets/images/anomas_cakes_logo.jpg"
+            width="125"
+            height="125"
+          />
+        </RouterLink>
       </div>
 
       <div class="routerlinks">
