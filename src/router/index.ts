@@ -20,7 +20,29 @@ const router = createRouter({
     {
       path: '/cakes',
       name: 'cakes',
-      component: () => import('../views/CakesView.vue')
+      component: () => import('../views/Cakes/CakesLayout.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('../views/Cakes/CakesIndexView.vue')
+        },
+        {
+          path: 'small-cakes',
+          component: () => import('../views/Cakes/SmallCakesView.vue')
+        },
+        {
+          path: 'speciality-cakes',
+          component: () => import('../views/Cakes/SpecialityCakesView.vue')
+        },
+        {
+          path: 'cupcakes',
+          component: () => import('../views/Cakes/CupcakesView.vue')
+        },
+        {
+          path: 'bento-cake-boxes',
+          component: () => import('../views/Cakes/BentoCakeBoxesView.vue')
+        },
+      ]
     },
     {
       path: '/shorteats',

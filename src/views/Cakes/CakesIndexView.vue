@@ -2,6 +2,7 @@
   <div class="menu">
     <v-row>
       <v-col v-for="(item, i) in images" :key="i" class="d-flex flex-column align-center">
+        <RouterLink :to="item.to">
         <img
           :src="item.img"
           class="w-[400px] h-[400px] object-cover object-center rounded-lg mb-2"
@@ -10,6 +11,7 @@
         <div class="text-h6 text-center">
           {{ item.name }}
         </div>
+        </RouterLink>
       </v-col>
     </v-row>
   </div>
@@ -17,22 +19,14 @@
 
 <script setup lang="ts">
 const images = [
-  { name: 'Cupcakes', img: '/src/assets/images/cupcakes-square.jpg', class: 'square' },
-  { name: 'Small Cakes', img: '/src/assets/images/small-cakes-square.jpg', class: 'square' },
-  { name: 'Bento Cake Box', img: '/src/assets/images/bento-cake-box-square.jpg', class: 'square' },
-  { name: 'Sri Lankan Speciality Cakes', img: '/src/assets/images/sri-lankan-speciality-cakes-square.jpg', class: 'square' }
+  { name: 'Cupcakes', img: '/src/assets/images/cupcakes-square.jpg', class: 'square', to: '/cakes/cupcakes' },
+  { name: 'Small Cakes', img: '/src/assets/images/small-cakes-square.jpg', class: 'square', to: '/cakes/small-cakes' },
+  { name: 'Bento Cake Box', img: '/src/assets/images/bento-cake-box-square.jpg', class: 'square', to: '/cakes/bento-cake-boxes' },
+  { name: 'Sri Lankan Speciality Cakes', img: '/src/assets/images/sri-lankan-speciality-cakes-square.jpg', class: 'square', to: '/cakes/speciality-cakes' }
 ]
 </script>
 
 <style scoped>
-.menu {
-  display: flex;
-  justify-content: center;
-  margin-block: var(--default-margin-block);
-  align-items: center;
-  height: 589px;
-}
-
 .images {
   width: 400px;
 }
