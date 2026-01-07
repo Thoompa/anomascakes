@@ -29,11 +29,11 @@
 </template>
 
 <script setup lang="ts">
-const photos = [
-  'src/assets/images/anomas_cakes_logo.jpg',
-  'src/assets/images/cakes.jpg',
-  'src/assets/images/shorteats.jpg'
-]
+import logo from '@/assets/images/anomas_cakes_logo.jpg';
+import cakes from '@/assets/images/cakes.jpg';
+import shorteats from '@/assets/images/shorteats.jpg';
+
+const photos = [logo, cakes, shorteats];
 </script>
 
 <style scoped>
