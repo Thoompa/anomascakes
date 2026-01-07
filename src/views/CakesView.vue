@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <v-row>
-      <v-col v-for="(item, i) in images" :key="i" cols="6" class="d-flex flex-column align-center">
+      <v-col v-for="(item, i) in images" :key="i" class="d-flex flex-column align-center">
         <img
           :src="item.img"
           class="w-[400px] h-[400px] object-cover object-center rounded-lg mb-2"
@@ -29,6 +29,8 @@ const images = [
   display: flex;
   justify-content: center;
   margin-block: var(--default-margin-block);
+  align-items: center;
+  height: 589px;
 }
 
 .images {

@@ -15,5 +15,6 @@ import Footer from './components/AppFooter.vue'
 .view {
   margin-inline: var(--app-padding-inline);
   margin-top: 130px;
+  min-height: 590px;
 }
 </style>
