@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="d-flex flex-column align-center">
     <v-row>
       <v-col v-for="(item, i) in images" :key="i" class="d-flex flex-column align-center">
         <RouterLink :to="item.to">

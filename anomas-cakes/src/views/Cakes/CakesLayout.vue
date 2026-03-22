@@ -9,10 +9,7 @@
 
 <style scoped>
 .menu {
-  display: flex;
-  justify-content: center;
+  display: block;
   margin-block: var(--default-margin-block);
-  align-items: center;
-  height: 589px;
 }
 </style>
