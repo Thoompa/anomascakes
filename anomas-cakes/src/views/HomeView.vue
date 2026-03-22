@@ -51,16 +51,71 @@ const photos = [logo, cakes, shorteats];
 
 .home-body {
   margin-block: var(--default-margin-block);
+  display: grid;
+  gap: 2rem;
 }
 
-.images {
-  width: 500px;
-  align-self: center;
+.home-body h1,
+.home-body h2,
+.home-body h3 {
+  color: var(--color-heading);
+  font-family: 'Georgia', serif;
+}
+
+.home-body h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.home-body h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.2rem, 4vw, 5rem);
+}
+
+.row .col {
+  width: min(100%, 400px);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(31, 22, 16, 0.12);
+  background: var(--color-surface);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row .col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(31, 22, 16, 0.18);
+}
+
+.row .col img.images {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.row .col h3,
+.row .col p {
+  margin: 0.8rem 1rem;
+  color: var(--color-text);
 }
 
 .v-carousel {
-  width: 600px;
-  height: 600px !important;
-  justify-self: center;
+  width: min(100%, 750px);
+  height: min(90vw, 600px) !important;
+  margin-inline: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 </style>

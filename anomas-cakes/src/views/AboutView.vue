@@ -22,13 +22,35 @@
 .about {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin-block: var(--default-margin-block);
-  gap: 50px;
+  gap: 36px;
+  background-color: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px;
 }
 
 .text {
-  width: 500px;
-  align-content: center;
+  max-width: 640px;
+  color: var(--color-text);
 }
+
+.text h1 {
+  font-size: 2.2rem;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+}
+
+.text p {
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.about img {
+  width: min(100%, 420px);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
 </style>

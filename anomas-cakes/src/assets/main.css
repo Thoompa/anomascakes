@@ -1,0 +1,38 @@
+@import './base.css';
+@import './colours.css';
+@import './styles.css';
+@import './variables.css';
+
+#app {
+  background: var(--color-background);
+  width: 100%;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--color-link);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover,
+.green:hover {
+  color: var(--color-link-hover);
+  background-color: rgba(243, 180, 27, 0.12);
+  border-radius: 4px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+}
+

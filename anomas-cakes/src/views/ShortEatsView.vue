@@ -12,4 +12,12 @@
   justify-content: center;
   margin-block: var(--default-margin-block);
 }
+
+.menu .images {
+  width: min(100%, 880px);
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
 </style>

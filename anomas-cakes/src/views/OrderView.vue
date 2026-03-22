@@ -56,10 +56,42 @@ const source = ref('')
 .order {
   margin: var(--default-margin-block) 30px;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
+  align-items: flex-start;
 }
 
 .form {
-  width: 800px;
+  width: min(100%, 860px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(22, 18, 17, 0.12);
 }
+
+.order label{
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.order v-text-field,
+.order v-combobox,
+.order v-textarea {
+  margin-bottom: 1rem;
+}
+
+.order h2 {
+  color: var(--color-heading);
+}
+
+.order a {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+}
+
+.order a:hover {
+  text-decoration: underline;
+}
+
 </style>
