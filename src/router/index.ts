@@ -58,6 +58,10 @@ const router = createRouter({
       path: '/success',
       name: 'orderSuccess',
       component: () => import('../views/OrderSuccessView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
     }
   ]
 })
