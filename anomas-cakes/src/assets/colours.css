@@ -1,0 +1,9 @@
+/* Placeholder for optional color overrides */
+:root {
+  --color-primary: var(--color-brand-primary);
+  --color-secondary: var(--color-brand-secondary);
+  --color-accent: var(--color-brand-accent);
+  --color-muted: var(--color-brand-muted);
+  --color-surface: var(--color-card);
+}
+

@@ -49,19 +49,41 @@ export default {
 .contact-details {
   padding-inline: var(--app-padding-inline);
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
   margin-block: var(--default-margin-block) 30px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 18px;
+  color: var(--color-text-secondary);
 }
 
 .logo {
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .social-media {
   display: flex;
-  background: black;
-  gap: 10px;
-  padding-left: var(--app-padding-inline);
+  background: var(--color-brand-secondary);
+  border-radius: 10px;
+  gap: 12px;
+  padding: 14px var(--app-padding-inline);
 }
+
+.social-media a {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.social-media img {
+  display: block;
+}
+
+.contact-details span {
+  display: block;
+  color: var(--color-text);
+}
+
 </style>
