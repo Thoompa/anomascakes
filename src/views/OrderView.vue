@@ -1,10 +1,11 @@
 <template>
   <div class="order">
     <form
-      action="https://public.herotofu.com/v1/37440b50-b158-11f0-beba-f5677707202f"
+      action="/success"
       method="post"
       accept-charset="UTF-8"
       class="form"
+      data-netlify="true"
     >
       <label for="fname">First name:</label><br />
       <v-text-field id="fname" name="fname" required /><br />
@@ -41,7 +42,7 @@
     </form>
     <div>
       <h2>All Enquiries:</h2>
-      <a href="mailto:info@anomascakes.com.au">info@anomascakes.com.au</a>
+      <a href="mailto:info@anomascakes.com">info@anomascakes.com</a>
     </div>
   </div>
 </template>

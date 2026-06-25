@@ -10,10 +10,10 @@
       <span> Caroline Springs </span>
       <span> Pickup only </span>
       <span> T: 0478 066 761 </span>
-      <span> E: info@anomascakes.com.au </span>
+      <span> E: info@anomascakes.com </span>
     </div>
     <div class="col">
-      <span> Anomas Cakes ©2025 </span>
+      <span> Anomas Cakes ©2026 </span>
     </div>
   </div>
 </template>
@@ -66,7 +66,6 @@ export default {
 .social-media {
   display: flex;
   background: var(--color-brand-secondary);
-  border-radius: 10px;
   gap: 12px;
   padding: 14px var(--app-padding-inline);
 }
