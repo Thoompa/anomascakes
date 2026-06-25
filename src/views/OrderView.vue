@@ -98,7 +98,8 @@
         :error-messages="errors.message ? [errors.message] : []"
       /><br />
 
-      <v-btn type="submit">Submit</v-btn>
+      <p v-if="submitError" class="submit-error" role="alert">{{ submitError }}</p>
+      <v-btn type="submit" :loading="isSubmitting" :disabled="isSubmitting">Submit</v-btn>
     </form>
     <div>
       <h2>All Enquiries:</h2>
@@ -125,6 +126,8 @@ const source = ref('')
 const sourceOther = ref('')
 const message = ref('')
 const botField = ref('')
+const submitError = ref('')
+const isSubmitting = ref(false)
 
 const errors = ref({
   fname: '',
@@ -186,7 +189,7 @@ const validateForm = () => {
 
   fname.value = safeFName
   lname.value = safeLName
-  email.value = safeEmail
+  email.value = safeEmail.toLowerCase()
   phone.value = safePhone
   source.value = safeSource
   sourceOther.value = safeSourceOther
@@ -233,6 +236,9 @@ const handleSubmit = async () => {
     return
   }
 
+  submitError.value = ''
+  isSubmitting.value = true
+
   const payload = {
     'form-name': 'order',
     'bot-field': '',
@@ -245,15 +251,25 @@ const handleSubmit = async () => {
     message: escapeHtml(message.value)
   }
 
-  await fetch('/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: encodeFormData(payload)
-  })
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: encodeFormData(payload)
+    })
 
-  await router.push('/success')
+    if (!response.ok) {
+      throw new Error(`Form submission failed with status ${response.status}`)
+    }
+
+    await router.push('/success')
+  } catch {
+    submitError.value = 'Unable to submit your enquiry right now. Please try again.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
@@ -301,6 +317,11 @@ const handleSubmit = async () => {
 
 .order a:hover {
   text-decoration: underline;
+}
+
+.submit-error {
+  color: #b3261e;
+  margin-bottom: 0.75rem;
 }
 
 </style>
