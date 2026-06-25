@@ -6,10 +6,17 @@
       accept-charset="UTF-8"
       class="form"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       name="order"
       @submit.prevent="handleSubmit"
     >
       <input type="hidden" name="form-name" value="order" />
+      <p class="honeypot">
+        <label>
+          Don't fill this out if you're human:
+          <input name="bot-field" autocomplete="off" tabindex="-1" />
+        </label>
+      </p>
       <label for="fname">First name:</label><br />
       <v-text-field id="fname" name="fname" required /><br />
 
@@ -32,8 +39,8 @@
       >
       </v-combobox>
 
-      <div v-if="source === 'other'">
-        <label for="message">Please specify:</label><br />
+      <div v-if="source === 'Other'">
+        <label for="sourceOther">Please specify:</label><br />
         <v-text-field id="sourceOther" name="sourceOther" />
       </div>
       <br />
@@ -119,6 +126,10 @@ const handleSubmit = async (event: Event) => {
 
 .order h2 {
   color: var(--color-heading);
+}
+
+.honeypot {
+  display: none;
 }
 
 .order a {
