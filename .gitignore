@@ -30,3 +30,6 @@ coverage
 *.sln
 *.sw?
 Anoma's Price List - Jun 2025.pdf
+
+# Local Netlify folder
+.netlify

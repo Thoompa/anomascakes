@@ -6,7 +6,10 @@
       accept-charset="UTF-8"
       class="form"
       data-netlify="true"
+      name="order"
+      @submit.prevent="handleSubmit"
     >
+      <input type="hidden" name="form-name" value="order" />
       <label for="fname">First name:</label><br />
       <v-text-field id="fname" name="fname" required /><br />
 
@@ -49,8 +52,40 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const source = ref('')
+const router = useRouter()
+
+const encodeFormData = (formData: FormData) => {
+  const params = new URLSearchParams()
+
+  for (const [key, value] of formData.entries()) {
+    params.append(key, String(value))
+  }
+
+  return params.toString()
+}
+
+const handleSubmit = async (event: Event) => {
+  const form = event.target as HTMLFormElement | null
+
+  if (!form) {
+    return
+  }
+
+  const formData = new FormData(form)
+
+  await fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: encodeFormData(formData)
+  })
+
+  await router.push('/success')
+}
 </script>
 
 <style scoped>
