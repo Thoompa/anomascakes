@@ -9,14 +9,14 @@
   <body>
     <form name="order" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="order" />
-      <input type="text" name="bot-field" />
-      <input type="text" name="fname" />
-      <input type="text" name="lname" />
-      <input type="email" name="email" />
-      <input type="text" name="phone" />
-      <input type="text" name="source" />
-      <input type="text" name="sourceOther" />
-      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" autocomplete="off" tabindex="-1" />
+      <input type="text" name="fname" maxlength="50" required />
+      <input type="text" name="lname" maxlength="50" required />
+      <input type="email" name="email" maxlength="254" required />
+      <input type="tel" name="phone" maxlength="20" pattern="[0-9+(). -]{8,20}" required />
+      <input type="text" name="source" maxlength="40" required />
+      <input type="text" name="sourceOther" maxlength="80" />
+      <textarea name="message" maxlength="1000"></textarea>
     </form>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>

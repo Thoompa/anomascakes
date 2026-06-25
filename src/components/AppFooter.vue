@@ -6,7 +6,7 @@
   </div>
   <div class="contact-details">
     <div class="col">
-      <span style="font-weight: bold"> Anomas Cakes </span>
+      <span class="brand-name"> Anomas Cakes </span>
       <span> Caroline Springs </span>
       <span> Pickup only </span>
       <span> T: 0478 066 761 </span>
@@ -83,6 +83,10 @@ export default {
 .contact-details span {
   display: block;
   color: var(--color-text);
+}
+
+.brand-name {
+  font-weight: 700;
 }
 
 </style>

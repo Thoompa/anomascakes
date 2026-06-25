@@ -4,23 +4,23 @@
   </v-carousel>
   <div class="home-body">
     <div>
-      <h1 style="text-transform: uppercase; text-align: center">Sample Heading</h1>
-      <h2 style="text-align: center">Sample Subheading</h2>
+      <h1 class="text-center text-uppercase">Sample Heading</h1>
+      <h2 class="text-center">Sample Subheading</h2>
     </div>
     <div>
       <div class="row">
         <div class="col">
           <RouterLink to="/cakes">
             <img alt="Anomas Cakes logo" class="images" src="@/assets/images/cakes.jpg" />
-            <h3 style="text-align: center">Cakes</h3>
-            <p style="text-align: center">Sample cakes subheading</p>
+            <h3 class="text-center">Cakes</h3>
+            <p class="text-center">Sample cakes subheading</p>
           </RouterLink>
         </div>
         <div class="col">
           <RouterLink to="/shorteats">
             <img alt="Anomas Cakes logo" class="images" src="@/assets/images/shorteats.jpg" />
-            <h3 style="text-align: center">Sri Lankan Short eats</h3>
-            <p style="text-align: center">Sample short eats subheading</p>
+            <h3 class="text-center">Sri Lankan Short eats</h3>
+            <p class="text-center">Sample short eats subheading</p>
           </RouterLink>
         </div>
       </div>
@@ -64,16 +64,21 @@ const photos = [logo, cakes, shorteats];
 
 .home-body h1 {
   font-size: 2.4rem;
-  text-transform: uppercase;
-  text-align: center;
   margin-bottom: 0.4rem;
 }
 
 .home-body h2 {
   font-size: 1.6rem;
-  text-align: center;
   font-weight: 400;
   color: var(--color-text-secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .row {
