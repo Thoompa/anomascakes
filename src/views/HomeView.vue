@@ -3,9 +3,13 @@
     <v-carousel-item v-for="(img, index) in photos" :key="index" :src="img" cover></v-carousel-item>
   </v-carousel>
   <div class="home-body">
-    <div>
-      <h1 class="text-center text-uppercase">Sample Heading</h1>
-      <h2 class="text-center">Sample Subheading</h2>
+    <div class="hero text-center">
+      <h1>Made-to-order cakes for your moments that matter</h1>
+      <h2>
+        From birthdays to bridal showers, we create custom cakes, cupcakes, and bento boxes
+        that look beautiful and taste even better.
+      </h2>
+      <RouterLink class="hero-cta" to="/order">Start Your Order</RouterLink>
     </div>
     <div v-if="showCakes && showShortEats">
       <div class="row">
@@ -74,6 +78,30 @@ const photos = [logo, cakes, ...(showShortEats ? [shorteats] : [])];
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-text-secondary);
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  gap: 0.9rem;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  background: var(--color-link);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-cta:hover {
+  color: #fff;
+  background: var(--color-link-hover);
 }
 
 .text-center {
