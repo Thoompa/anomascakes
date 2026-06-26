@@ -53,3 +53,20 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+## Feature Flags
+
+This project uses Vite environment variables for simple feature flags.
+
+- `VITE_FEATURE_SHORT_EATS` controls whether Short Eats is available.
+- Default behavior (variable missing): enabled.
+- Set `VITE_FEATURE_SHORT_EATS=false` to hide Short Eats from navigation, hide the HomeView Cakes + Short Eats row, and redirect direct `/shorteats` visits to home.
+
+Create a local env file (for example `.env.local`) with:
+
+```sh
+VITE_FEATURE_SHORT_EATS=false
+```
+
+Restart the dev server after changing env values.
+

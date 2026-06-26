@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { features } from '@/config/features'
+
+const showShortEats = features.shortEatsEnabled
+</script>
 
 <template>
   <div class="header">
@@ -14,7 +18,7 @@
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/cakes">Cakes</RouterLink>
-          <RouterLink to="/shorteats">Short Eats</RouterLink>
+          <RouterLink v-if="showShortEats" to="/shorteats">Short Eats</RouterLink>
           <RouterLink to="/order">Order</RouterLink>
         </nav>
       </div>

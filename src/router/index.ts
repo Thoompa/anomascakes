@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { features } from '@/config/features'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,7 +48,14 @@ const router = createRouter({
     {
       path: '/shorteats',
       name: 'shorteats',
-      component: () => import('../views/ShortEatsView.vue')
+      component: () => import('../views/ShortEatsView.vue'),
+      beforeEnter: () => {
+        if (!features.shortEatsEnabled) {
+          return { name: 'home' }
+        }
+
+        return true
+      }
     },
     {
       path: '/order',
