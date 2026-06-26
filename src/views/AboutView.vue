@@ -53,4 +53,26 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
 }
 
+@media (max-width: 760px) {
+  .about {
+    gap: 20px;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .text p {
+    line-height: 1.65;
+  }
+
+  .about img {
+    max-width: 320px;
+    width: 100%;
+  }
+}
+
 </style>

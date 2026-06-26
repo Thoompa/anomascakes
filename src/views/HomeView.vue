@@ -154,4 +154,30 @@ const photos = [logo, cakes, ...(showShortEats ? [shorteats] : [])];
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
+
+@media (max-width: 760px) {
+  .home-body h1 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .home-body h2 {
+    font-size: clamp(1.05rem, 4.8vw, 1.25rem);
+    line-height: 1.4;
+  }
+
+  .hero {
+    gap: 0.7rem;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .v-carousel {
+    width: 100%;
+    height: min(92vw, 420px) !important;
+    border-radius: 14px;
+  }
+}
 </style>

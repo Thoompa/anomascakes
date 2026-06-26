@@ -27,22 +27,15 @@ const images = [
 </script>
 
 <style scoped>
-.images {
-  width: 400px;
-}
-
-.top-row {
-  height: 311px;
-  width: 467px;
-}
-
-.btm-row {
-  height: 700px;
-  width: 467px;
-}
-
 .square {
-  height: 311px;
-  width: 311px;
+  width: min(100%, 311px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .square {
+    width: min(100%, 260px);
+  }
 }
 </style>

@@ -324,4 +324,16 @@ const handleSubmit = async () => {
   margin-bottom: 0.75rem;
 }
 
+@media (max-width: 760px) {
+  .order {
+    margin: var(--default-margin-block) 0;
+    gap: 24px;
+  }
+
+  .form {
+    padding: 18px;
+    border-radius: 12px;
+  }
+}
+
 </style>

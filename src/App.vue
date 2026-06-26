@@ -14,7 +14,7 @@ import Footer from './components/AppFooter.vue'
 <style scoped>
 .view {
   margin-inline: var(--app-padding-inline);
-  margin-top: calc(var(--navbar-height) + 18px);
+  margin-top: 18px;
   min-height: 580px;
   max-width: 1280px;
   margin-left: auto;
@@ -25,7 +25,8 @@ import Footer from './components/AppFooter.vue'
 @media (max-width: 912px) {
   .view {
     margin-inline: clamp(12px, 6vw, 24px);
-    margin-top: calc(var(--navbar-height) + 12px);
+    margin-top: 14px;
+    min-height: 500px;
   }
 }
 </style>

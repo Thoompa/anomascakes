@@ -89,4 +89,22 @@ export default {
   font-weight: 700;
 }
 
+@media (max-width: 760px) {
+  .social-media {
+    justify-content: center;
+    gap: 10px;
+    padding-inline: 18px;
+  }
+
+  .contact-details {
+    padding-inline: 18px;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .contact-details .col {
+    width: 100%;
+  }
+}
+
 </style>
