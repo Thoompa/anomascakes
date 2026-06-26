@@ -22,6 +22,13 @@ const router = createRouter({
       path: '/cakes',
       name: 'cakes',
       component: () => import('../views/Cakes/CakesLayout.vue'),
+      beforeEnter: () => {
+        if (!features.cakesEnabled) {
+          return { name: 'home' }
+        }
+
+        return true
+      },
       children: [
         {
           path: '',

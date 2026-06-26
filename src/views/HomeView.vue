@@ -7,7 +7,7 @@
       <h1 class="text-center text-uppercase">Sample Heading</h1>
       <h2 class="text-center">Sample Subheading</h2>
     </div>
-    <div v-if="showShortEatsRow">
+    <div v-if="showCakes && showShortEats">
       <div class="row">
         <div class="col">
           <RouterLink to="/cakes">
@@ -34,8 +34,9 @@ import logo from '@/assets/images/anomas_cakes_logo.jpg';
 import cakes from '@/assets/images/cakes.jpg';
 import shorteats from '@/assets/images/shorteats.jpg';
 
-const showShortEatsRow = features.shortEatsEnabled;
-const photos = showShortEatsRow ? [logo, cakes, shorteats] : [logo, cakes];
+const showCakes = features.cakesEnabled;
+const showShortEats = features.shortEatsEnabled;
+const photos = [logo, cakes, ...(showShortEats ? [shorteats] : [])];
 </script>
 
 <style scoped>

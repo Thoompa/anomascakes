@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { features } from '@/config/features'
 
+const showCakes = features.cakesEnabled
 const showShortEats = features.shortEatsEnabled
 </script>
 
@@ -17,7 +18,7 @@ const showShortEats = features.shortEatsEnabled
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/cakes">Cakes</RouterLink>
+          <RouterLink v-if="showCakes" to="/cakes">Cakes</RouterLink>
           <RouterLink v-if="showShortEats" to="/shorteats">Short Eats</RouterLink>
           <RouterLink to="/order">Order</RouterLink>
         </nav>
